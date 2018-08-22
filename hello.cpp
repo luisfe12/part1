@@ -1,6 +1,10 @@
 #include<iostream>
 using namespace std;
 	int main(){
-			cout<<"Ella no te ama, por eso se fue a la Cato"<<endl;
+	  int p;
+      int p1;
+      cin>>p>>p1;
+      cout<<p+p1<<endl;
+      cout<<"hola mundo, por eso ella se fue a lima"<<endl;
 		return 0;
 }
