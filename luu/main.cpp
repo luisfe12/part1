@@ -4,11 +4,11 @@ using namespace std;
 
 int main()
 {
-    int r;
-    int p;
-    cin >> r;
-    cin >> p;
-    cout << "Hello world!" << endl;
-    cout << r+p << endl;
+    int r = 2147483646;
+    int p = r+1;
+
+    cout << p << endl;
+    p= p+1;
+    cout << p << endl;
     return 0;
 }
