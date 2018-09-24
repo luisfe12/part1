@@ -1,59 +1,36 @@
 #include <iostream>
 
 using namespace std;
-int palindromo(int n){
- int aux,i,j,resto,numin=0;
-    while(n>0){
-    n=aux;
-    resto=aux%10;
-    aux=aux/10;
-    numin=numin*10+resto;
-
-return numin;
-i++;
-}
-
-}
-
-int
-
 
 int main()
-{   //int n=999;
-    //int numer;
-    int mult;
-    int aux,i,j,resto,numin=0;
-
-    for(int i=100;i<=200;i++){
-        for(int j=100;j<=200;j++){
-            mult=i*j;
+{
+    int a[2][2],b[2][2],c[2][2];
 
 
-            cout<<mult<<endl;
-            }}
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++){
+            cin>>a[i][j];
+        }
 
-           }
+    }
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++){
+            cin>>b[i][j];
+        }
+    }
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++){
+            c[i][j]=0;
+            for(int k=0;k<2;k++){
+                c[i][j]=c[i][j]+(a[i][k]*b[k][j]);
+            }
+        }
 
+    }
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++){
+            cout<<c[i][j]<<endl;
+        }
+    }
 
-
-
-
-            /*aux=mult;
-            aux=aux/10;
-            resto=aux%10;
-            aux=aux/10;
-            numin=numin*10+resto;}
-            if(numin==aux){
-            aux==numin;
-
-            //i*j=0;}
-           } //else{i*j=0;}
-        cout<<numin<<endl;
-    //cout<<numin<<endl;
-    //}
-        //cout<<numin<<endl;
-       // }
-
-
-//cout<<numin<<endl;
-return 0;}*/
+}
