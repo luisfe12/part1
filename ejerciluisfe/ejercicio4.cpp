@@ -6,7 +6,7 @@ void palindromo(int a){
     for(int i=999;i>=a;i--){
         for(int j=999;j>=a;j--){
         int cont=i*j;
-        int one = cont%10;
+        int one = cont%10;// de ECEsasha (100)
 		int two = (cont%100 - cont%10)/10;
 		int three = (cont%1000 - cont%100)/100;
 		int four = (cont%10000 - cont%1000)/1000;
