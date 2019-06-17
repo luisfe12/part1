@@ -2,7 +2,8 @@
 using namespace std;
 
 template<typename T>
-class nodo{
+class nodo
+{
     public:
     
     T dato;
@@ -63,23 +64,36 @@ public:
     void remove(int);
     void invertir();
     int getsize(){return tam;}
-    void destruir();
+    //void destruir();
     void mostrar();
 
 };
 template<typename T>
 lista<T>:: ~lista()
 {
-    int cont=0;
-    while (cont!=tam)
+    if(!cabeza)cout<<"no hay elementos";
+    //int cont=0;
+    else
     {
+        int cont=0;
+        while (cont!=tam)
+        {
         nodo<T> *borrado=cabeza;
         cabeza=cabeza->next;
         delete borrado;
         cont++;
+        }
+        cout<<"se borro los datos";
     }
-    cout<<"se borro los datos";
-    
+}
+template<typename T>
+void lista<T>::remove_front()
+{
+    if(!cabeza)cout<<"no se remueve nada";
+    /* else
+    {
+        delete 
+    }*/
 }
 
 template<typename T>
@@ -230,11 +244,11 @@ int main()
 
  
     lista<int>::iterator iterador;
-    for(iterador=listass.begin(); iterador!=listass.end();iterador.operator++())
+    for(iterador=listass.begin(); iterador!=listass.end();++iterador)
      { 
        
        cout<<*(iterador.get())<<" ";
-       //cout<<listass.getsize();
+       
        
      }
      cout<<listass.getsize();
