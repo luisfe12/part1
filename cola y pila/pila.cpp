@@ -33,7 +33,7 @@ class pila
 template<typename T>
 bool pila<T>::vacio()
 {
-    if(!cabeza){cout<<" esta vacio"<<endl;return true;}
+    if(!tam){cout<<" esta vacio"<<endl;return true;}
     else{cout<<"hay valores"<<endl; return false;}
 }
 
@@ -64,14 +64,18 @@ void pila<T>::pop()
     if(!cabeza)cout<<"no se  encontro nada";
     else
     {
+        nodo<T>* borrado2=cabeza;
         nodo<T>* borrado=cabeza;
         while(borrado->next)
         {
+            borrado2=borrado;
             borrado=borrado->next;
         }
+        borrado2->next=NULL;
         delete borrado;
         tam--;
     }
+    if(!tam)cabeza=NULL;
 }
 
 template<typename T>
@@ -98,9 +102,14 @@ int main()
     pila<int> stack;
     stack.push(5);
     stack.push(15);
+    stack.push(20);
+    stack.push(100);
     cout<<*(stack.Top())<<endl;
     stack.pop();
-    cout<<*(stack.Top())<<endl;
+    stack.pop();
+    stack.pop();
+    stack.pop();
+  //  cout<<*(stack.Top())<<endl;
     stack.vacio();
    
 }
