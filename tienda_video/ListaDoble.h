@@ -13,9 +13,12 @@ private:
 public:
     ListaDoble(){tam=0; cabeza=NULL; cola=NULL;};
     void insertar_Valor(VideoType dato1);
+    void insetar_ini(VideoType dato);
+    void insetar_fin(VideoType dato);
     void Buscar_valor(VideoType dato);
     void Borrar_valor(VideoType dato);
     void Eliminar_todo();
+    void mostrar();
     int get_tam(){return tam;}
     VideoType get_dato(VideoType dato);
 };
@@ -32,25 +35,25 @@ void  ListaDoble::insertar_Valor(VideoType dato)
 
     else
     {
-        if(nuevo < cabeza)
+        if(nuevo->dato.getTitle() < cabeza->dato.getTitle())
         {
             cabeza->anterior=nuevo;
             nuevo->siguiente = cabeza;//ingresa nuevo bloque
             cabeza = nuevo;
         }
 
-        else if (nuevo > cola)
+        else if (nuevo->dato.getTitle() > cola->dato.getTitle())
         {
             cola->siguiente=nuevo;
             nuevo->anterior = cola;
             cola = nuevo;//nueva direccion
         }
-        else if ((cola==nuevo) )
+        else if ((cola->dato.getTitle()==nuevo->dato.getTitle()) )
         {
            cola->dato.checkInt();
         }
 
-        else if((cabeza == nuevo))
+        else if((cabeza->dato.getTitle() == nuevo->dato.getTitle()))
         {
             cabeza->dato.checkInt();
         }
@@ -62,7 +65,7 @@ void  ListaDoble::insertar_Valor(VideoType dato)
             
             while(aux)
             {
-                if(aux->dato > dato)
+                if(aux->dato.getTitle() > dato.getTitle())
                 {
                     nuevo->siguiente = aux;
                     aux->anterior = nuevo;
@@ -86,6 +89,8 @@ void  ListaDoble::insertar_Valor(VideoType dato)
         
     }
 }
+
+
 
 void ListaDoble::Borrar_valor(VideoType video)
 {
@@ -131,6 +136,21 @@ void ListaDoble::Borrar_valor(VideoType video)
     }
     
     
-} 
+}
+
+
+void ListaDoble::mostrar()
+{
+    Nodo * aux = cabeza;
+    while (aux)
+    {
+        aux->dato.printInfo();
+        aux = aux->siguiente;
+        cout<<"se muestra el sigueinete valor "<<endl;
+    }
+
+   
+    
+}
 
 #endif

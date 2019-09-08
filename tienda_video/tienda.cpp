@@ -2,14 +2,14 @@
 
 int main()
 {
-    VideoType uno ("Jhon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
-    VideoType dos("pon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
+    VideoType uno ("zhon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
+    VideoType dos("von","sdx","sdxds","sdxs","xsdx","sxsx",1 );
     VideoType tres("pon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
-    VideoType cuatro("pon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
-    VideoType cinco("pon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
-    VideoType seis("pon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
-    VideoType siete("pon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
-    VideoType ocho("Jyun","sdx","sdxds","sdxs","xsdx","sxsx",1 );
+    VideoType cuatro("oon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
+    VideoType cinco("mon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
+    VideoType seis("lon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
+    VideoType siete("bon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
+    VideoType ocho("jyun","sdx","sdxds","sdxs","xsdx","sxsx",1 );
     VideoType nueve("abra","sdx","sdxds","sdxs","xsdx","sxsx",1 );
         VideoType diez("huhu","sdx","sdxds","sdxs","xsdx","sxsx",1 );
          VideoType once("luis","sdx","sdxds","sdxs","xsdx","sxsx",1 );
@@ -27,6 +27,6 @@ int main()
            video.insertar_Valor(siete);
             video.insertar_Valor(ocho);
              video.insertar_Valor(nueve);
-    
+    video.mostrar();
     return 0;
 }

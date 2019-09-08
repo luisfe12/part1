@@ -124,12 +124,12 @@ bool VideoType::operator != (const VideoType& video) const
 
 bool VideoType::operator > (const VideoType& video) const
 {
-    return (MovieTitle > video.MovieTitle);
+    return (this->MovieTitle > video.MovieTitle);
 }
 
 bool VideoType::operator < (const VideoType& video) const
 {
-    return (MovieTitle < video.MovieTitle);
+    return (this->MovieTitle < video.MovieTitle);
 }
 
 
