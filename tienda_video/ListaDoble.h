@@ -16,7 +16,7 @@ public:
     void insetar_ini(VideoType dato);
     void insetar_fin(VideoType dato);
     void Buscar_valor(VideoType dato);
-    void Borrar_valor(VideoType dato);
+    void Borrar_valor(VideoType& dato);
     void Eliminar_todo();
     void mostrar();
     int get_tam(){return tam;}
@@ -92,8 +92,12 @@ void  ListaDoble::insertar_Valor(VideoType dato)
 
 
 
-void ListaDoble::Borrar_valor(VideoType video)
+
+
+
+void ListaDoble::Borrar_valor(VideoType& video)
 {
+
     if(!cabeza) return;
     else if(cabeza->dato.getTitle() == video.getTitle())
     {
@@ -116,12 +120,14 @@ void ListaDoble::Borrar_valor(VideoType video)
         Nodo *tem2;
         while (tem1)
         {
-            if(tem1->dato.getTitle() == video.getTitle())
+            if(tem1->dato.getTitle() >= video.getTitle())
             {
                     tem2->siguiente = tem1->siguiente;
                     tem1->siguiente->anterior = tem2;
-                    tam--;
+                    
                     delete tem1;
+                    tam--;
+                    break;//necesario si no continua el bucle
             }
 
             else
@@ -146,6 +152,7 @@ void ListaDoble::mostrar()
     {
         aux->dato.printInfo();
         aux = aux->siguiente;
+        cout<<endl;
         cout<<"se muestra el sigueinete valor "<<endl;
     }
 

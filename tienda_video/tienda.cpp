@@ -3,7 +3,7 @@
 int main()
 {
     VideoType uno ("zhon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
-    VideoType dos("von","sdx","sdxds","sdxs","xsdx","sxsx",1 );
+    VideoType dos("Von","sdx","sdxds","sdxs","xsdx","sxsx",1 );
     VideoType tres("pon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
     VideoType cuatro("oon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
     VideoType cinco("mon","sdx","sdxds","sdxs","xsdx","sxsx",1 );
@@ -28,5 +28,8 @@ int main()
             video.insertar_Valor(ocho);
              video.insertar_Valor(nueve);
     video.mostrar();
+    cout<<"-----------------------------------------------------"<<endl;
+    video.Borrar_valor(dos);
+   video.mostrar();
     return 0;
 }

@@ -35,7 +35,7 @@ public:
     bool operator !=(const VideoType&)const;
     bool operator > (const VideoType&)const;
     bool operator < (const VideoType&)const;
-
+    ~VideoType(){}
 
 };
 
@@ -58,6 +58,9 @@ void VideoType::setVideoInfo(string title,string star1, string star2,string prod
     MovieDirector = director;
     MovieProductionCo = companyPo;
     copiesInStock = setstore;
+    
+    int i =0;
+    MovieTitle[i] = towupper(MovieTitle[i]);//convierte a mayuscula
 }
 
 void VideoType::checOut()
